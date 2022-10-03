@@ -13,12 +13,17 @@ function Keyboard() {
           return <Key keyVal={key}/>;
         })}
       </div>
-      <div className='line2'> {keys2.map((key) => {
+      <div className='line2'> 
+      {keys2.map((key) => {
         return <Key keyVal={key}/>;
       })}</div>
-      <div className='line3'> {keys3.map((key) => {
+      <div className='line3'> 
+      <Key keyVal={"ENTER"} bigKey/>
+      {keys3.map((key) => {
         return <Key keyVal={key}/>;
-      })}</div>
+      })}
+      <Key keyVal={"DELETE"} bigKey/>
+      </div>
     </div>
   )
 }
