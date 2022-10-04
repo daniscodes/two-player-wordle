@@ -5,10 +5,12 @@ import Key from './Key';
 function Keyboard() {
   const { onEnter, onDelete, onSelectLetter, disabledLetters } = useContext(AppContext);
 
+// keyboard values
   const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
   const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
   const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
 
+// handle typed keyboard input
   const handleKeyboard = useCallback((event) => {
     if (event.key === "Enter") {
       onEnter();

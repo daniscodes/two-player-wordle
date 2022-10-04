@@ -18,6 +18,7 @@ function App() {
   })
   const [correctWord, setCorrectWord] = useState("")
 
+//generate correct word
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
@@ -25,6 +26,7 @@ function App() {
     })
   }, [])
 
+// Register chosen letter
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) return;
     const newBoard = [...board];
@@ -33,6 +35,7 @@ function App() {
     setCurrAttempt({ ...currAttempt, letterPos: currAttempt.letterPos += 1 })
   }
 
+// Register delete/backspace
   const onDelete = () => {
     if (currAttempt.letterPos === 0) return;
     const newBoard = [...board];
@@ -41,6 +44,7 @@ function App() {
     setCurrAttempt({ ...currAttempt, letterPos: currAttempt.letterPos -= 1 })
   }
 
+// Register enter button
   const onEnter = () => {
     if (currAttempt.letterPos !== 5) return;
 
@@ -65,6 +69,7 @@ function App() {
 
   }
   return (
+    
     <div className="App">
       <nav>
         <h1>Wordle</h1>

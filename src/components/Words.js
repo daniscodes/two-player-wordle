@@ -1,4 +1,6 @@
 import wordBank from "../wordle-bank.txt";
+
+// default board
 export const boardDefault = [
   ["", "", "", "", ""],
   ["", "", "", "", ""],
@@ -8,6 +10,7 @@ export const boardDefault = [
   ["", "", "", "", ""]
 ];
 
+// randomly select a word from the bank
 export const generateWordSet = async () => {
   let wordSet;
 

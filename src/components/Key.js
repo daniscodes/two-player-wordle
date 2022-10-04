@@ -4,6 +4,7 @@ import { AppContext } from '../App';
 function Key({ keyVal, bigKey, disabled }) {
   const { onSelectLetter, onDelete, onEnter } = useContext(AppContext);
 
+// Determine specific key input
   const selectLetter = () => {
     if (keyVal === "ENTER") {
       onEnter();
